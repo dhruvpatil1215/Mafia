@@ -57,13 +57,13 @@ export const SocketProvider = ({ children }) => {
   }, [errorMsg]);
 
   // Connect to socket.io server
-  useEffect(() => {
-    const socketInstance = io({
-      autoConnect: true,
-      reconnection: true,
-      reconnectionAttempts: 10,
-      reconnectionDelay: 1000
-    });
+useEffect(() => {
+  const socketInstance = io("https://mafia-jdyt.vercel.app/", {
+    autoConnect: true,
+    reconnection: true,
+    reconnectionAttempts: 10,
+    reconnectionDelay: 1000
+  });
 
     setSocket(socketInstance);
 
