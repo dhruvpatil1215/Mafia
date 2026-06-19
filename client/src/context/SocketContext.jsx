@@ -58,7 +58,7 @@ export const SocketProvider = ({ children }) => {
 
   // Connect to socket.io server
 useEffect(() => {
-  const socketInstance = io("https://mafia-jdyt.vercel.app/", {
+  const socketInstance = io("https://mafia-qly9.onrender.com", {
     autoConnect: true,
     reconnection: true,
     reconnectionAttempts: 10,
