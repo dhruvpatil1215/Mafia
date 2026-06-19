@@ -1,0 +1,31 @@
+{
+  "name": "mafia-game",
+  "version": "1.0.0",
+  "description": "Multiplayer Mafia/Werewolf web game with real-time communication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm run build --prefix client",
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"nodemon server.js\" \"npm run dev --prefix client\""
+  },
+  "keywords": [
+    "mafia",
+    "werewolf",
+    "multiplayer",
+    "socket.io",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "mongoose": "^9.7.1",
+    "socket.io": "^4.7.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "nodemon": "^3.0.2"
+  }
+}
